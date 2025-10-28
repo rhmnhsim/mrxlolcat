@@ -7,6 +7,11 @@
     "start": "frog start"
   },
   "dependencies": {
-    "frog": "^0.10.0"
-  }
+    "frog": "^0.18.3"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
