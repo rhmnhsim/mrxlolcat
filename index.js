@@ -1,7 +1,7 @@
 import { Frog } from 'frog'
 
 // ============================================
-// FRAME: CLAIM KONTOL 🎁
+// FRAME: CLAIM NFT 🎁
 // ============================================
 
 const app = new Frog({
@@ -10,34 +10,31 @@ const app = new Frog({
   basePath: '/',
 })
 
-// Frame utama — tampil di feed Warpcast
+// FRAME UTAMA
 app.frame('/', (c) => {
   return c.res({
-    image: 'https://zora.co/static/nft-preview.png', // Ganti dengan gambar NFT kamu
+    image: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png', // bisa diganti ke gambar NFT kamu
     imageAspectRatio: '1:1',
     intents: [
       {
         label: 'Claim NFT 🎁',
         action: 'post',
+        target: '/mint',
       },
     ],
   })
 })
 
-// Aksi ketika tombol ditekan
+// FRAME KEDUA (SAAT USER KLIK)
 app.frame('/mint', (c) => {
-  const { fid } = c
-  console.log(`User FID: ${fid} ingin mint NFT!`)
-
-  // Arahkan ke halaman mint NFT kamu di Zora/Base
   return c.res({
-    image: 'https://zora.co/static/nft-success.png', // Ganti dengan gambar sukses
+    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg', // ganti ke gambar "success"
     imageAspectRatio: '1:1',
     intents: [
       {
         label: 'Go to Mint Page 🪄',
         action: 'link',
-        target: 'https://zora.co/coin/base:0x431371045e52dac0bd39a722dfc9e76d79913afd', // Ganti dengan link NFT kamu
+        target: 'https://zora.co/collect/zora/12345', // ganti dengan URL NFT kamu
       },
       {
         label: 'Back 🔙',
@@ -49,4 +46,3 @@ app.frame('/mint', (c) => {
 })
 
 export default app
-
