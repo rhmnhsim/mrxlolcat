@@ -1,15 +1,12 @@
 {
-  "name": "mrxlolcat",
+  "name": "farcaster-claim-nft-frame",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "frog dev",
+    "start": "frog start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "frog": "^0.18.3"
+    "frog": "^0.10.0"
   }
 }
